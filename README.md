@@ -1,2 +1,2 @@
-this repositor about my internship assignments 
+This repositor about my internship assignments 
 
