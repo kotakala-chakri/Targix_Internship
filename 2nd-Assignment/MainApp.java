@@ -8,7 +8,8 @@ public class MainApp {
         
         manager.addToList("Apple");
         manager.addToList("Banana");
-        manager.addToList("Apple"); // duplicate allowed
+        manager.addToList("Apple");
+        manager.addToList("anmail"); // duplicate allowed
 
         System.out.println("List Elements: " + manager.getList());
 
