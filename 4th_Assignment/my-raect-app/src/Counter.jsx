@@ -4,7 +4,7 @@ import { AppContext } from "./ContextApi";
 
 const CountText = styled.h2`
   font-size: 40px;
-  color: ${({ value }) => (value > 0 ? "green" : value < 0 ? "red" : "blue")};
+  color: ${({ value }) => (value > 0 ? "green" : value < 0 ? "red" : "yellow")};
 `;
 
 export const Counter = () => {
