@@ -2,6 +2,8 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Container, Title, Card } from "../Layouts";
 
+import { useEffect } from "react";
+
 const Input = styled.input`
   padding: 8px;
   margin: 5px;
@@ -24,13 +26,21 @@ const TodoItem = styled.div`
   border-radius: 5px;
 `;
 const TodoText = styled.span`
-  color: ${(props) => (props.active ? "black" : "red")};
+  color: ${(props) => (props.$active ? "black" : "red")};
   font-weight: bold;
 `;
 
 export const TodoList = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const saved = localStorage.getItem("todos");     //updated
+    return saved ? JSON.parse(saved) : [];   //updated
+  });
+
   const [input, setInput] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));  // updated
+  }, [todos]);
 
   const addTodo = () => {
     if (!input.trim()) return;
@@ -59,7 +69,7 @@ export const TodoList = () => {
 
         {todos.map((todo, index) => (
           <TodoItem key={index}>
-            <TodoText active={true}>{todo}</TodoText>
+            <TodoText $active={true}>{todo}</TodoText>
             <Button onClick={() => removeTodo(index)}>Delete</Button>
           </TodoItem>
         ))}

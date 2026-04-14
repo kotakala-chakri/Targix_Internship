@@ -1,37 +1,38 @@
-import {
-  Title,
-  Container,
-  Button,
-  Click,
-  Card,
-  Input,
-  Message,
-} from "../Layouts";
+import { Title, Container, Click, Box, Input, Message } from "../Layouts";
 import { useState } from "react";
+
 export const Home = () => {
-  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+const savedUser = localStorage.getItem("user");
+
+const [name, setName] = useState(savedUser || "");
+const [isLoggedIn, setIsLoggedIn] = useState(!!savedUser);
+
+
 
   const handleLogin = () => {
     if (name && password) {
       setIsLoggedIn(true);
+      localStorage.setItem("user", name); //update this to save user to localStorage on login
     } else {
       alert("Please enter name and password");
     }
   };
 
-  const handleLogout = () => {
+
+  const handleLogout = () => { 
     setIsLoggedIn(false);
     setName("");
-    setPassword("");
+    localStorage.removeItem("user");  //update this to remove user from local storage
   };
+
   return (
-    <Container> 
+    <Container>
       <Title>Welcome to React Router + React Query App</Title>
-      <p>This is the home page. you want to navigate to other pages.</p>
- 
-      <Card>
+      <p>Please login to access Todolist.</p>
+
+      <Box>
         {!isLoggedIn ? (
           <>
             <h3>Login</h3>
@@ -60,7 +61,7 @@ export const Home = () => {
             <Click onClick={handleLogout}>Logout</Click>
           </>
         )}
-      </Card>
+      </Box>
     </Container>
   );
 };

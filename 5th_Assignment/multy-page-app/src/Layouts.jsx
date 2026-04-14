@@ -16,7 +16,7 @@ export const Title = styled.h1`
 export const Card = styled.div`
   background: #045269;
   color: white;
-  justfy-content: center;
+
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -59,4 +59,16 @@ export const Click = styled.button`
 export const Message = styled.p`
   color: #2df51b;
   font-weight: bold;
+`;
+
+export const Box = styled.div` //updated this to Box and added styling
+  background: #045269;
+  color: white;
+ align-items: center;  //updated this to center the content
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 `;

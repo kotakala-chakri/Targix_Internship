@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { Title, Container, Card } from "../Layouts";
+import { Title, Container, Box } from "../Layouts";
 
 export const Users = () => {
   const { data, isLoading, isError } = useQuery({
@@ -15,12 +15,12 @@ export const Users = () => {
     <Container>
       <Title>Users</Title>
       {data?.results?.map((user) => (
-        <Card key={user.login.uuid}>
+        <Box key={user.login.uuid}>
           <img src={user.picture.thumbnail} />
           <p>
             {user.name.first} {user.name.last}
           </p>
-        </Card>
+        </Box>
       ))}
     </Container>
   );
