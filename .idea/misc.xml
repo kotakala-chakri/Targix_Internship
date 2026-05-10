@@ -7,11 +7,14 @@
         <option value="$PROJECT_DIR$/7th_Assignment_Backend_1/pom.xml" />
         <option value="$PROJECT_DIR$/7th_Assignment_Backend1/pom.xml" />
         <option value="$PROJECT_DIR$/8th_Assignment_Backend2/pom.xml" />
+        <option value="$PROJECT_DIR$/9th_Assignment_Backend3/pom.xml" />
+        <option value="$PROJECT_DIR$/9th_Asssignment_Backend3/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/7th_Assignment_Backend_1/pom.xml" />
+        <option value="$PROJECT_DIR$/9th_Assignment_Backend3/pom.xml" />
       </set>
     </option>
   </component>

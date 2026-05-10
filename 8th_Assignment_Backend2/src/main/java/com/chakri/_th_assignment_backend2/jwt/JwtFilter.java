@@ -37,7 +37,7 @@ public class JwtFilter implements Filter {
         String token = header.substring(7);
 
         try {
-            jwtUtil.extractUsername(token); // validate
+            jwtUtil.extractUsername(token);
         } catch (Exception e) {
             throw new RuntimeException("Invalid Token");
         }
