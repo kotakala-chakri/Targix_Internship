@@ -10,11 +10,21 @@
         <module name="7th_Assignment_Backend1" />
         <module name="8th_Assignment_Backend2" />
       </profile>
+      <profile name="Annotation profile for 10th_Assignment_Backend4" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="10th_Assignment_Backend4" />
+      </profile>
       <profile name="Annotation profile for 9th_Asssignment_Backend3" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="9th_Asssignment_Backend3" />
@@ -26,6 +36,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="10th_Assignment_Backend4" options="-parameters" />
       <module name="7th_Assignment_Backend1" options="-parameters" />
       <module name="8th_Assignment_Backend2" options="-parameters" />
       <module name="9th_Assignment_Backend3" options="-parameters" />
