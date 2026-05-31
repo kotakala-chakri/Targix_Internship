@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: Course_Management_Backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/course_platform
+    username: root
+    password: "Chakri@2005"
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080

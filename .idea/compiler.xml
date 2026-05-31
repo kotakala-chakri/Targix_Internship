@@ -10,16 +10,7 @@
         <module name="7th_Assignment_Backend1" />
         <module name="8th_Assignment_Backend2" />
       </profile>
-      <profile name="Annotation profile for 10th_Assignment_Backend4" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="10th_Assignment_Backend4" />
-      </profile>
-      <profile name="Annotation profile for 9th_Asssignment_Backend3" enabled="true">
+      <profile name="Annotation profile for Final_Project_Backend" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -28,10 +19,22 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="9th_Asssignment_Backend3" />
+        <module name="10th_Assignment_Backend4" />
+      </profile>
+      <profile name="Annotation profile for Course_Management_Backend" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="Course_Management_Backend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="9th_Assignment_Backend3" target="17" />
+      <module name="Final_Project_Backend" target="17" />
+      <module name="Major_Project_Backend" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -41,6 +44,9 @@
       <module name="8th_Assignment_Backend2" options="-parameters" />
       <module name="9th_Assignment_Backend3" options="-parameters" />
       <module name="9th_Asssignment_Backend3" options="-parameters" />
+      <module name="Course_Management_Backend" options="-parameters" />
+      <module name="Final_Project_Backend" options="-parameters" />
+      <module name="Major_Project_Backend" options="-parameters" />
     </option>
   </component>
 </project>
